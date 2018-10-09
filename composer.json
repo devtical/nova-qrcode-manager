@@ -1,0 +1,36 @@
+{
+    "name": "kristories/qrcode-manager",
+    "description": "A Laravel Nova tool to manage QR code.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "qr",
+        "qrcode",
+        "qrcodes",
+        "qr-code",
+        "qr-codes",
+        "barcode"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "kristories/nova-qrcode-field": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kristories\\QrcodeManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kristories\\QrcodeManager\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
