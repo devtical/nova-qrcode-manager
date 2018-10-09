@@ -15,7 +15,16 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (!class_exists('CreateQrcodesTables')) {
+            $timestamp = date('Y_m_d_His', time());
+            $this->publishes([
+                __DIR__ . '/../database/migrations/create_qrcodes_table.php.stub' => $this->app->databasePath() . "/migrations/{$timestamp}_create_qrcodes_table.php",
+            ], 'migrations');
+        }
 
+        $this->app->booted(function () {
+            $this->routes();
+        });
     }
 
     /**
