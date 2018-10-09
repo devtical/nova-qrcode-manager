@@ -15,6 +15,8 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'qrcode-manager');
+
         if (!class_exists('CreateQrcodesTables')) {
             $timestamp = date('Y_m_d_His', time());
             $this->publishes([
