@@ -1,5 +1,5 @@
 {
-    "name": "kristories/qrcode-manager",
+    "name": "kristories/nova-qrcode-manager",
     "description": "A Laravel Nova tool to manage QR code.",
     "keywords": [
         "laravel",
