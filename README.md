@@ -13,6 +13,12 @@ You can install the Nova tool in to a [Laravel](http://laravel.com) app that use
 composer require kristories/qrcode-manager
 ```
 
+Publish the migration with :
+
+```cli
+php artisan vendor:publish
+```
+
 ## Usage
 
 Add `QrcodeManager` to your `NovaServiceProvider.php`
