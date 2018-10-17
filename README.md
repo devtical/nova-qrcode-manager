@@ -10,7 +10,7 @@ A Laravel Nova tool to manage QR code.
 You can install the Nova tool in to a [Laravel](http://laravel.com) app that uses [Nova](http://nova.laravel.com) via composer :
 
 ```cli
-composer require kristories/qrcode-manager
+composer require kristories/nova-qrcode-manager
 ```
 
 Publish the migration with :
