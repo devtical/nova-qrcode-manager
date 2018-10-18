@@ -21,7 +21,7 @@ class ToolServiceProvider extends ServiceProvider
             $timestamp = date('Y_m_d_His', time());
             $this->publishes([
                 __DIR__ . '/../database/migrations/create_qrcodes_table.php.stub' => $this->app->databasePath() . "/migrations/{$timestamp}_create_qrcodes_table.php",
-            ], 'migrations');
+            ], 'qrcode-manager-migrations');
         }
 
         $this->app->booted(function () {
