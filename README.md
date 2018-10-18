@@ -16,7 +16,7 @@ composer require kristories/nova-qrcode-manager
 Publish the migration with :
 
 ```cli
-php artisan vendor:publish
+php artisan vendor:publish --tag=qrcode-manager-migrations
 ```
 
 ## Usage
