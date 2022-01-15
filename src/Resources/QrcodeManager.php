@@ -1,10 +1,11 @@
 <?php
+
 namespace Kristories\QrcodeManager\Resources;
 
-use Laravel\Nova\Resource;
 use Illuminate\Http\Request;
 use Kristories\Qrcode\Qrcode;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Resource;
 
 class QrcodeManager extends Resource
 {
@@ -28,6 +29,7 @@ class QrcodeManager extends Resource
      * @var string
      */
     public static $title = 'text';
+
     /**
      * The columns that should be searched.
      *
@@ -36,6 +38,7 @@ class QrcodeManager extends Resource
     public static $search = [
         'text',
     ];
+
     /**
      * Get the displayable label of the resource.
      *
@@ -45,6 +48,7 @@ class QrcodeManager extends Resource
     {
         return __('qrcode-manager::navigation.label');
     }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -54,19 +58,18 @@ class QrcodeManager extends Resource
     public function fields(Request $request)
     {
         return [
-            Qrcode::make('QR Code')
-                ->text($this->text)
+            Qrcode::make('QR Code', 'text')
                 ->background($this->background)
                 ->logo($this->logo)
                 ->exceptOnForms(),
 
-            Text::make('Text')
+            Text::make('Text', 'text')
                 ->sortable()
                 ->rules([
                     'required',
                 ]),
 
-            Text::make('Background')
+            Text::make('Background Image URL', 'background')
                 ->sortable()
                 ->rules([
                     'nullable',
@@ -74,7 +77,7 @@ class QrcodeManager extends Resource
                 ])
                 ->onlyOnForms(),
 
-            Text::make('Logo')
+            Text::make('Logo Image URL', 'logo')
                 ->sortable()
                 ->rules([
                     'nullable',
