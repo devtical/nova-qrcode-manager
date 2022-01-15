@@ -1,6 +1,6 @@
 # Nova QR Code Manager
 
-A Laravel Nova tool to manage QR code.
+A Laravel Nova tool to manage QR code. Behind the scenes [kristories/nova-qrcode-field](https://github.com/Kristories/nova-qrcode-field) is used.
 
 ![Screenshot](https://i.imgur.com/1mpkE24.png)
 ![Screenshot](https://i.imgur.com/zlRtm1I.png)
