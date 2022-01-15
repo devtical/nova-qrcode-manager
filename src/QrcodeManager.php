@@ -14,8 +14,8 @@ class QrcodeManager extends Tool
      */
     public function boot()
     {
-        Nova::script('qrcode-manager', __DIR__ . '/../dist/js/tool.js');
-        Nova::style('qrcode-manager', __DIR__ . '/../dist/css/tool.css');
+        Nova::script('qrcode-manager', __DIR__.'/../dist/js/tool.js');
+        Nova::style('qrcode-manager', __DIR__.'/../dist/css/tool.css');
 
         Nova::resources([
             \Kristories\QrcodeManager\Resources\QrcodeManager::class,

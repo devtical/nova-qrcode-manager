@@ -15,12 +15,12 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'qrcode-manager');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'qrcode-manager');
 
         if (!class_exists('CreateQrcodesTables')) {
             $timestamp = date('Y_m_d_His', time());
             $this->publishes([
-                __DIR__ . '/../database/migrations/create_qrcodes_table.php.stub' => $this->app->databasePath() . "/migrations/{$timestamp}_create_qrcodes_table.php",
+                __DIR__.'/../database/migrations/create_qrcodes_table.php.stub' => $this->app->databasePath()."/migrations/{$timestamp}_create_qrcodes_table.php",
             ], 'qrcode-manager-migrations');
         }
 
@@ -42,7 +42,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova', Authorize::class])
             ->prefix('nova-vendor/qrcode-manager')
-            ->group(__DIR__ . '/../routes/api.php');
+            ->group(__DIR__.'/../routes/api.php');
     }
 
     /**
