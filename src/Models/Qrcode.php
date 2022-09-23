@@ -1,6 +1,6 @@
 <?php
 
-namespace Kristories\QrcodeManager\Models;
+namespace Devtical\QrcodeManager\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

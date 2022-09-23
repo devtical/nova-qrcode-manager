@@ -1,7 +1,8 @@
 <?php
 
-namespace Kristories\QrcodeManager;
+namespace Devtical\QrcodeManager;
 
+use Illuminate\Http\Request;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
@@ -18,7 +19,18 @@ class QrcodeManager extends Tool
         Nova::style('qrcode-manager', __DIR__.'/../dist/css/tool.css');
 
         Nova::resources([
-            \Kristories\QrcodeManager\Resources\QrcodeManager::class,
+            \Devtical\QrcodeManager\Resources\QrcodeManager::class,
         ]);
+    }
+
+    /**
+     * Build the menu that renders the navigation links for the tool.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return mixed
+     */
+    public function menu(Request $request)
+    {
+        //
     }
 }
