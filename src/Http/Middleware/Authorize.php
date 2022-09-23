@@ -1,8 +1,8 @@
 <?php
 
-namespace Kristories\QrcodeManager\Http\Middleware;
+namespace Devtical\QrcodeManager\Http\Middleware;
 
-use Kristories\QrcodeManager\QrcodeManager;
+use Devtical\QrcodeManager\QrcodeManager;
 
 class Authorize
 {

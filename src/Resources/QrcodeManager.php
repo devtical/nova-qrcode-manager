@@ -1,9 +1,9 @@
 <?php
 
-namespace Kristories\QrcodeManager\Resources;
+namespace Devtical\QrcodeManager\Resources;
 
+use Devtical\Qrcode\Qrcode;
 use Illuminate\Http\Request;
-use Kristories\Qrcode\Qrcode;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Resource;
 
@@ -14,7 +14,7 @@ class QrcodeManager extends Resource
      *
      * @var string
      */
-    public static $model = 'Kristories\QrcodeManager\Models\Qrcode';
+    public static $model = 'Devtical\QrcodeManager\Models\Qrcode';
 
     /**
      * Indicates if the resource should be globally searchable.
@@ -35,9 +35,7 @@ class QrcodeManager extends Resource
      *
      * @var array
      */
-    public static $search = [
-        'text',
-    ];
+    public static $search = ['text',];
 
     /**
      * Get the displayable label of the resource.
@@ -85,49 +83,5 @@ class QrcodeManager extends Resource
                 ])
                 ->onlyOnForms(),
         ];
-    }
-
-    /**
-     * Get the cards available for the request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function cards(Request $request)
-    {
-        return [];
-    }
-
-    /**
-     * Get the filters available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function filters(Request $request)
-    {
-        return [];
-    }
-
-    /**
-     * Get the lenses available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function lenses(Request $request)
-    {
-        return [];
-    }
-
-    /**
-     * Get the actions available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function actions(Request $request)
-    {
-        return [];
     }
 }
